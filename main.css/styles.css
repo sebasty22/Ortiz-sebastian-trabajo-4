@@ -1,0 +1,130 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  color: black;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+body {
+  background-image: linear-gradient(to right, #505b63, #195b89);
+}
+.contenedor {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.header {
+  background-color: black;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 100px 100px;
+}
+
+.menu {
+  background-color: cornflowerblue;
+  display: grid;
+  grid-template-columns: 57px 1fr;
+  grid-template-rows: 53px 47px;
+  grid-area: 1/1/2/4;
+}
+
+.logo {
+  background-color: rgb(106, 145, 219);
+}
+.titulo {
+  font-family: 'Barlow Condensed', sans-serif;
+  background-color: cornflowerblue;
+  width: 100%;
+  display: grid;
+  grid-template-rows: 53px 47px;
+  place-items: center start;
+}
+
+.titulo h1 {
+  grid-area: 1/1/2/2;
+}
+
+.titulo h2 {
+  grid-area: 2/1/3/2;
+}
+@media (max-width: 786px) {
+  .titulo h2 {
+    grid-area: 1/2/2/3;
+  }
+}
+
+.social {
+  background-color: rgb(29, 41, 41);
+}
+.navegacion {
+  background-color: rgb(203, 204, 201);
+  display: grid;
+  grid-auto-flow: column;
+  place-items: center;
+  grid-area: 2/1/3/4;
+}
+
+@media (max-width: 786px) {
+  .navegacion {
+    grid-template-rows: repeat(4, 30px);
+  }
+}
+
+.mainP {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+@media (max-width: 786px) {
+  .main {
+    grid-template-rows: repeat(4, 1fr);
+  }
+}
+
+.listContainer {
+  grid-area: 1/1/2/2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: center;
+}
+@media (max-width: 786px) {
+  .listContainer {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.box {
+  border: 1px white solid;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: center;
+}
+@media (max-width: 786px) {
+  .box {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+hijo1 {
+  grid-area: 1/1/2/2;
+}
+.hijo2 {
+  grid-area: 1/2/2/3;
+}
+.hijo3 {
+  grid-area: 2/1/3/2;
+}
+.hijo4 {
+  grid-area: 2/2/3/3;
+}
+
+.footer {
+  background-color: rgb(216, 216, 216);
+  padding: 2px;
+}
